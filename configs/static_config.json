@@ -1,0 +1,115 @@
+{
+  "exchanges": {
+    "coinbase": {
+      "markets": {
+        "ETH-USD": 0.05
+      },
+      "api-credential": {
+        "key": "",
+        "secret": "",
+        "passphrase": ""
+      },
+      "min_order_amount": {
+        "USD": 10.0,
+        "BTC": 0.0001,
+        "ETH": 0.0001,
+        "LTC": 0.0001
+      },
+      "rest_api_endpoint": "https://api.pro.coinbase.com",
+      "ws_api_endpoint": "wss://ws-feed.pro.coinbase.com",
+      "fees": {
+        "maker": 0.0,
+        "taker": 0.003
+      },
+      "order_remaining_amount": {
+        "BTC": {
+          "avg": 0.00001124,
+          "sd": 0.00000047
+        }
+      },
+      "consecutive_trades": true
+    },
+    "gemini": {
+      "markets": {
+        "BTC-USD": 1,
+        "ETH-USD": 1,
+        "ETH-BTC": 0.0002
+      },
+      "api-credential": {
+        "key": "",
+        "secret": ""
+      },
+      "min_order_amount": {
+        "USD": 1,
+        "BTC": 0.00001,
+        "ETH": 0.00001
+      },
+      "historic_data_folder": "data/gemini_data",
+      "historic_data_start_dates": {
+        "BTC-USD": "2015-10-08",
+        "ETH-USD": "2016-05-09",
+        "ETH-BTC": "2016-05-09"
+      },
+      "rest_api_endpoint": "https://api.gemini.com/v1",
+      "ws_api_endpoint": "wss://api.gemini.com/v1",
+      "fees": {
+        "maker": 0.0025,
+        "taker": 0.0025
+      },
+      "order_remaining_amount": {},
+      "consecutive_trades": false
+    }
+  },
+  "coinmarketcap": {
+    "currencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "BCH",
+      "XRP",
+      "ADA",
+      "XMR",
+      "XLM",
+      "NEO",
+      "EOS",
+      "DAS",
+      "IOT",
+      "XEM",
+      "ETC",
+      "TRX",
+      "ZEC",
+      "XVG"
+    ],
+    "ids": [
+      "bitcoin",
+      "ethereum",
+      "litecoin",
+      "bitcoin-cash",
+      "ripple",
+      "cardano",
+      "monero",
+      "stellar",
+      "neo",
+      "eos",
+      "dash",
+      "iota",
+      "nem",
+      "ethereum-classic",
+      "tron",
+      "zcash",
+      "verge"
+    ],
+    "data_api_endpoint": "https://graphs2.coinmarketcap.com",
+    "quote_api_endpoint": "https://api.coinmarketcap.com/v1"
+  },
+  "coinapi": {
+    "api-credential": [
+      {
+        "key": ""
+      },
+      {
+        "key": ""
+      }
+    ]
+  }
+}

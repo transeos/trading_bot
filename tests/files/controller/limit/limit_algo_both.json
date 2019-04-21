@@ -1,0 +1,23 @@
+{
+  "time" : {
+    "history_min" : 2,
+    "duration_min" : 360
+  },
+  "algo" : 1,
+  "exchanges" : {
+    "COINBASE" : {
+      "trading_pairs" : [
+        "BTC-USD"
+      ],
+      "account_share" : {
+        "BTC" : 1,
+        "USD" : 1
+      }
+    }
+  },
+  "mode" : 2,
+  "universe" : {
+    "vol_fraction" : 0.3,
+    "max_order_delay_ms" : 40
+  }
+}

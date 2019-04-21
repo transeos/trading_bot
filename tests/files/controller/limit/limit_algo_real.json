@@ -1,0 +1,15 @@
+{
+  "time" : {
+    "history_min" : 2,
+    "duration_min" : 2
+  },
+  "algo" : 1,
+  "exchanges" : {
+    "COINBASE" : {
+      "trading_pairs" : [
+        "BTC-USD"
+      ]
+    }
+  },
+  "mode" : 1
+}

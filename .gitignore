@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# temp file created by editors
+*.swp
+
+# mac ds_store flie
+.DS_Store
+# Folders
+.idea
+cmake-build-debug
+build
+
+# Original Git folder
+.git_

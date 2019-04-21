@@ -1,0 +1,1814 @@
+echo/blocking_tcp_echo_client.o: echo/blocking_tcp_echo_client.cpp \
+ /opt/local/include/gcc5/c++/cstdlib \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++config.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/os_defines.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/cpu_defines.h \
+ /usr/include/stdlib.h /usr/include/Availability.h \
+ /usr/include/AvailabilityInternal.h /usr/include/_types.h \
+ /usr/include/sys/_types.h /usr/include/sys/cdefs.h \
+ /usr/include/sys/_symbol_aliasing.h \
+ /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
+ /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
+ /usr/include/sys/wait.h /usr/include/sys/_types/_pid_t.h \
+ /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
+ /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+ /usr/include/i386/signal.h /usr/include/machine/_mcontext.h \
+ /usr/include/i386/_mcontext.h /usr/include/mach/machine/_structs.h \
+ /usr/include/mach/i386/_structs.h /usr/include/machine/types.h \
+ /usr/include/i386/types.h /usr/include/sys/_types/_int8_t.h \
+ /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
+ /usr/include/sys/_types/_int64_t.h /usr/include/sys/_types/_u_int8_t.h \
+ /usr/include/sys/_types/_u_int16_t.h \
+ /usr/include/sys/_types/_u_int32_t.h \
+ /usr/include/sys/_types/_u_int64_t.h /usr/include/sys/_types/_intptr_t.h \
+ /usr/include/sys/_types/_uintptr_t.h \
+ /usr/include/sys/_pthread/_pthread_attr_t.h \
+ /usr/include/sys/_types/_sigaltstack.h \
+ /usr/include/sys/_types/_ucontext.h /usr/include/sys/_types/_sigset_t.h \
+ /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_uid_t.h \
+ /usr/include/sys/resource.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdint.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/stdint.h \
+ /usr/include/_types/_uint8_t.h /usr/include/_types/_uint16_t.h \
+ /usr/include/_types/_uint32_t.h /usr/include/_types/_uint64_t.h \
+ /usr/include/_types/_intmax_t.h /usr/include/_types/_uintmax_t.h \
+ /usr/include/sys/_types/_timeval.h /usr/include/machine/endian.h \
+ /usr/include/i386/endian.h /usr/include/sys/_endian.h \
+ /usr/include/libkern/_OSByteOrder.h \
+ /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
+ /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
+ /usr/include/sys/_types/_wchar_t.h /usr/include/sys/_types/_null.h \
+ /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+ /opt/local/include/gcc5/c++/cstring /usr/include/string.h \
+ /usr/include/sys/_types/_ssize_t.h /usr/include/strings.h \
+ /opt/local/include/gcc5/c++/iostream /opt/local/include/gcc5/c++/ostream \
+ /opt/local/include/gcc5/c++/ios /opt/local/include/gcc5/c++/iosfwd \
+ /opt/local/include/gcc5/c++/bits/stringfwd.h \
+ /opt/local/include/gcc5/c++/bits/memoryfwd.h \
+ /opt/local/include/gcc5/c++/bits/postypes.h \
+ /opt/local/include/gcc5/c++/cwchar /usr/include/wchar.h \
+ /usr/include/sys/_types/_mbstate_t.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdarg.h \
+ /usr/include/stdio.h /usr/include/sys/_types/_va_list.h \
+ /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h \
+ /usr/include/time.h /usr/include/sys/_types/_clock_t.h \
+ /usr/include/sys/_types/_time_t.h /usr/include/sys/_types/_timespec.h \
+ /usr/include/_wctype.h /usr/include/sys/_types/_wint_t.h \
+ /usr/include/_types/_wctype_t.h /usr/include/ctype.h \
+ /usr/include/runetype.h /opt/local/include/gcc5/c++/exception \
+ /opt/local/include/gcc5/c++/bits/atomic_lockfree_defines.h \
+ /opt/local/include/gcc5/c++/bits/exception_ptr.h \
+ /opt/local/include/gcc5/c++/bits/exception_defines.h \
+ /opt/local/include/gcc5/c++/bits/nested_exception.h \
+ /opt/local/include/gcc5/c++/bits/char_traits.h \
+ /opt/local/include/gcc5/c++/bits/stl_algobase.h \
+ /opt/local/include/gcc5/c++/bits/functexcept.h \
+ /opt/local/include/gcc5/c++/bits/cpp_type_traits.h \
+ /opt/local/include/gcc5/c++/ext/type_traits.h \
+ /opt/local/include/gcc5/c++/ext/numeric_traits.h \
+ /opt/local/include/gcc5/c++/bits/stl_pair.h \
+ /opt/local/include/gcc5/c++/bits/move.h \
+ /opt/local/include/gcc5/c++/bits/concept_check.h \
+ /opt/local/include/gcc5/c++/type_traits \
+ /opt/local/include/gcc5/c++/bits/stl_iterator_base_types.h \
+ /opt/local/include/gcc5/c++/bits/stl_iterator_base_funcs.h \
+ /opt/local/include/gcc5/c++/debug/debug.h \
+ /opt/local/include/gcc5/c++/bits/stl_iterator.h \
+ /opt/local/include/gcc5/c++/bits/ptr_traits.h \
+ /opt/local/include/gcc5/c++/bits/predefined_ops.h \
+ /opt/local/include/gcc5/c++/cstdint \
+ /opt/local/include/gcc5/c++/bits/localefwd.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++locale.h \
+ /opt/local/include/gcc5/c++/clocale /usr/include/locale.h \
+ /usr/include/_locale.h /opt/local/include/gcc5/c++/cctype \
+ /opt/local/include/gcc5/c++/bits/ios_base.h \
+ /opt/local/include/gcc5/c++/ext/atomicity.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/gthr.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/pthread/pthread_impl.h \
+ /usr/include/pthread/sched.h /usr/include/pthread_impl.h \
+ /usr/include/sys/_pthread/_pthread_cond_t.h \
+ /usr/include/sys/_pthread/_pthread_condattr_t.h \
+ /usr/include/sys/_pthread/_pthread_key_t.h \
+ /usr/include/sys/_pthread/_pthread_mutex_t.h \
+ /usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+ /usr/include/sys/_pthread/_pthread_once_t.h \
+ /usr/include/sys/_pthread/_pthread_rwlock_t.h \
+ /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+ /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
+ /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/atomic_word.h \
+ /opt/local/include/gcc5/c++/bits/locale_classes.h \
+ /opt/local/include/gcc5/c++/string \
+ /opt/local/include/gcc5/c++/bits/allocator.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++allocator.h \
+ /opt/local/include/gcc5/c++/ext/new_allocator.h \
+ /opt/local/include/gcc5/c++/new \
+ /opt/local/include/gcc5/c++/bits/ostream_insert.h \
+ /opt/local/include/gcc5/c++/bits/cxxabi_forced.h \
+ /opt/local/include/gcc5/c++/bits/stl_function.h \
+ /opt/local/include/gcc5/c++/backward/binders.h \
+ /opt/local/include/gcc5/c++/bits/range_access.h \
+ /opt/local/include/gcc5/c++/initializer_list \
+ /opt/local/include/gcc5/c++/bits/basic_string.h \
+ /opt/local/include/gcc5/c++/ext/alloc_traits.h \
+ /opt/local/include/gcc5/c++/bits/alloc_traits.h \
+ /opt/local/include/gcc5/c++/ext/string_conversions.h \
+ /opt/local/include/gcc5/c++/cstdio /opt/local/include/gcc5/c++/cerrno \
+ /usr/include/errno.h /usr/include/sys/errno.h \
+ /opt/local/include/gcc5/c++/bits/functional_hash.h \
+ /opt/local/include/gcc5/c++/bits/hash_bytes.h \
+ /opt/local/include/gcc5/c++/bits/basic_string.tcc \
+ /opt/local/include/gcc5/c++/bits/locale_classes.tcc \
+ /opt/local/include/gcc5/c++/system_error \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/error_constants.h \
+ /opt/local/include/gcc5/c++/stdexcept \
+ /opt/local/include/gcc5/c++/streambuf \
+ /opt/local/include/gcc5/c++/bits/streambuf.tcc \
+ /opt/local/include/gcc5/c++/bits/basic_ios.h \
+ /opt/local/include/gcc5/c++/bits/locale_facets.h \
+ /opt/local/include/gcc5/c++/cwctype /usr/include/wctype.h \
+ /usr/include/_types/_wctrans_t.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/ctype_base.h \
+ /opt/local/include/gcc5/c++/bits/streambuf_iterator.h \
+ /opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/ctype_inline.h \
+ /opt/local/include/gcc5/c++/bits/locale_facets.tcc \
+ /opt/local/include/gcc5/c++/bits/basic_ios.tcc \
+ /opt/local/include/gcc5/c++/bits/ostream.tcc \
+ /opt/local/include/gcc5/c++/istream \
+ /opt/local/include/gcc5/c++/bits/istream.tcc ../../../include/asio.hpp \
+ ../../../include/asio/async_result.hpp \
+ ../../../include/asio/detail/config.hpp /usr/include/unistd.h \
+ /usr/include/sys/unistd.h /usr/include/sys/_types/_posix_vdisable.h \
+ /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_gid_t.h \
+ /usr/include/sys/_types/_useconds_t.h /usr/include/sys/select.h \
+ /usr/include/sys/_types/_fd_def.h /usr/include/sys/_types/_suseconds_t.h \
+ /usr/include/sys/_types/_fd_setsize.h /usr/include/sys/_types/_fd_set.h \
+ /usr/include/sys/_types/_fd_clr.h /usr/include/sys/_types/_fd_isset.h \
+ /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_copy.h \
+ /usr/include/sys/_select.h /usr/include/sys/_types/_uuid_t.h \
+ /usr/include/gethostuuid.h ../../../include/asio/handler_type.hpp \
+ ../../../include/asio/detail/push_options.hpp \
+ ../../../include/asio/detail/pop_options.hpp \
+ ../../../include/asio/basic_datagram_socket.hpp \
+ /opt/local/include/gcc5/c++/cstddef \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stddef.h \
+ ../../../include/asio/basic_socket.hpp \
+ ../../../include/asio/async_result.hpp \
+ ../../../include/asio/basic_io_object.hpp \
+ ../../../include/asio/io_service.hpp \
+ /opt/local/include/gcc5/c++/typeinfo \
+ ../../../include/asio/detail/noncopyable.hpp \
+ ../../../include/asio/detail/wrapped_handler.hpp \
+ ../../../include/asio/detail/bind_handler.hpp \
+ ../../../include/asio/detail/handler_alloc_helpers.hpp \
+ ../../../include/asio/detail/addressof.hpp \
+ /opt/local/include/gcc5/c++/memory \
+ /opt/local/include/gcc5/c++/bits/stl_construct.h \
+ /opt/local/include/gcc5/c++/bits/stl_uninitialized.h \
+ /opt/local/include/gcc5/c++/bits/stl_tempbuf.h \
+ /opt/local/include/gcc5/c++/bits/stl_raw_storage_iter.h \
+ /opt/local/include/gcc5/c++/ext/concurrence.h \
+ /opt/local/include/gcc5/c++/bits/uses_allocator.h \
+ /opt/local/include/gcc5/c++/functional /opt/local/include/gcc5/c++/tuple \
+ /opt/local/include/gcc5/c++/utility \
+ /opt/local/include/gcc5/c++/bits/stl_relops.h \
+ /opt/local/include/gcc5/c++/array \
+ /opt/local/include/gcc5/c++/bits/unique_ptr.h \
+ /opt/local/include/gcc5/c++/bits/shared_ptr.h \
+ /opt/local/include/gcc5/c++/bits/shared_ptr_base.h \
+ /opt/local/include/gcc5/c++/bits/allocated_ptr.h \
+ /opt/local/include/gcc5/c++/ext/aligned_buffer.h \
+ /opt/local/include/gcc5/c++/bits/shared_ptr_atomic.h \
+ /opt/local/include/gcc5/c++/bits/atomic_base.h \
+ /opt/local/include/gcc5/c++/backward/auto_ptr.h \
+ ../../../include/asio/handler_alloc_hook.hpp \
+ ../../../include/asio/impl/handler_alloc_hook.ipp \
+ ../../../include/asio/detail/call_stack.hpp \
+ ../../../include/asio/detail/tss_ptr.hpp \
+ ../../../include/asio/detail/posix_tss_ptr.hpp \
+ ../../../include/asio/detail/impl/posix_tss_ptr.ipp \
+ ../../../include/asio/detail/throw_error.hpp \
+ ../../../include/asio/error_code.hpp \
+ ../../../include/asio/impl/error_code.ipp \
+ ../../../include/asio/detail/local_free_on_block_exit.hpp \
+ ../../../include/asio/detail/socket_types.hpp /usr/include/sys/ioctl.h \
+ /usr/include/sys/ttycom.h /usr/include/sys/ioccom.h \
+ /usr/include/sys/filio.h /usr/include/sys/sockio.h \
+ /usr/include/sys/poll.h /usr/include/sys/types.h \
+ /usr/include/sys/_types/_u_char.h /usr/include/sys/_types/_u_short.h \
+ /usr/include/sys/_types/_u_int.h /usr/include/sys/_types/_caddr_t.h \
+ /usr/include/sys/_types/_blkcnt_t.h /usr/include/sys/_types/_blksize_t.h \
+ /usr/include/sys/_types/_in_addr_t.h \
+ /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
+ /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
+ /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+ /usr/include/sys/_types/_errno_t.h /usr/include/sys/_types/_fsblkcnt_t.h \
+ /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/sys/stat.h \
+ /usr/include/sys/_types/_s_ifmt.h /usr/include/sys/_types/_filesec_t.h \
+ /usr/include/fcntl.h /usr/include/sys/fcntl.h \
+ /usr/include/sys/_types/_o_sync.h /usr/include/sys/_types/_o_dsync.h \
+ /usr/include/sys/socket.h /usr/include/machine/_param.h \
+ /usr/include/i386/_param.h /usr/include/net/net_kev.h \
+ /usr/include/sys/_types/_sa_family_t.h \
+ /usr/include/sys/_types/_socklen_t.h /usr/include/sys/_types/_iovec_t.h \
+ /usr/include/sys/uio.h /usr/include/sys/un.h /usr/include/netinet/in.h \
+ /usr/include/netinet6/in6.h /usr/include/netinet/tcp.h \
+ /usr/include/arpa/inet.h /usr/include/netdb.h /usr/include/net/if.h \
+ /usr/include/net/if_var.h /usr/include/sys/time.h \
+ /usr/include/sys/_types/_timeval64.h /usr/include/sys/queue.h \
+ /usr/include/sys/_types/_timeval32.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/limits.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/machine/limits.h \
+ /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+ /usr/include/sys/syslimits.h \
+ ../../../include/asio/detail/impl/throw_error.ipp \
+ ../../../include/asio/detail/throw_exception.hpp \
+ ../../../include/asio/system_error.hpp ../../../include/asio/error.hpp \
+ ../../../include/asio/impl/error.ipp \
+ ../../../include/asio/detail/task_io_service_thread_info.hpp \
+ ../../../include/asio/detail/op_queue.hpp \
+ ../../../include/asio/detail/thread_info_base.hpp \
+ /opt/local/include/gcc5/c++/climits \
+ ../../../include/asio/detail/handler_cont_helpers.hpp \
+ ../../../include/asio/handler_continuation_hook.hpp \
+ ../../../include/asio/detail/handler_invoke_helpers.hpp \
+ ../../../include/asio/handler_invoke_hook.hpp \
+ ../../../include/asio/impl/io_service.hpp \
+ ../../../include/asio/detail/handler_type_requirements.hpp \
+ ../../../include/asio/detail/service_registry.hpp \
+ ../../../include/asio/detail/mutex.hpp \
+ ../../../include/asio/detail/posix_mutex.hpp \
+ ../../../include/asio/detail/scoped_lock.hpp \
+ ../../../include/asio/detail/impl/posix_mutex.ipp \
+ ../../../include/asio/detail/impl/service_registry.hpp \
+ ../../../include/asio/detail/impl/service_registry.ipp \
+ /opt/local/include/gcc5/c++/vector \
+ /opt/local/include/gcc5/c++/bits/stl_vector.h \
+ /opt/local/include/gcc5/c++/bits/stl_bvector.h \
+ /opt/local/include/gcc5/c++/bits/vector.tcc \
+ ../../../include/asio/detail/task_io_service.hpp \
+ ../../../include/asio/detail/atomic_count.hpp \
+ /opt/local/include/gcc5/c++/atomic \
+ ../../../include/asio/detail/event.hpp \
+ ../../../include/asio/detail/posix_event.hpp \
+ ../../../include/asio/detail/assert.hpp \
+ /opt/local/include/gcc5/c++/cassert /usr/include/assert.h \
+ ../../../include/asio/detail/impl/posix_event.ipp \
+ ../../../include/asio/detail/reactor_fwd.hpp \
+ ../../../include/asio/detail/task_io_service_operation.hpp \
+ ../../../include/asio/detail/handler_tracking.hpp \
+ ../../../include/asio/detail/impl/handler_tracking.ipp \
+ ../../../include/asio/detail/impl/task_io_service.hpp \
+ ../../../include/asio/detail/completion_handler.hpp \
+ ../../../include/asio/detail/fenced_block.hpp \
+ ../../../include/asio/detail/macos_fenced_block.hpp \
+ /usr/include/libkern/OSAtomic.h \
+ /usr/include/libkern/OSAtomicDeprecated.h \
+ /opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdbool.h \
+ /usr/include/libkern/OSSpinLockDeprecated.h \
+ /usr/include/libkern/OSAtomicQueue.h \
+ ../../../include/asio/detail/operation.hpp \
+ ../../../include/asio/detail/impl/task_io_service.ipp \
+ ../../../include/asio/detail/limits.hpp \
+ /opt/local/include/gcc5/c++/limits \
+ ../../../include/asio/detail/reactor.hpp \
+ ../../../include/asio/detail/kqueue_reactor.hpp /usr/include/sys/event.h \
+ ../../../include/asio/detail/object_pool.hpp \
+ ../../../include/asio/detail/reactor_op.hpp \
+ ../../../include/asio/detail/select_interrupter.hpp \
+ ../../../include/asio/detail/pipe_select_interrupter.hpp \
+ ../../../include/asio/detail/impl/pipe_select_interrupter.ipp \
+ ../../../include/asio/detail/timer_queue_base.hpp \
+ ../../../include/asio/detail/timer_queue_set.hpp \
+ ../../../include/asio/detail/impl/timer_queue_set.ipp \
+ ../../../include/asio/detail/wait_op.hpp \
+ ../../../include/asio/detail/impl/kqueue_reactor.hpp \
+ ../../../include/asio/detail/impl/kqueue_reactor.ipp \
+ ../../../include/asio/impl/io_service.ipp \
+ ../../../include/asio/detail/scoped_ptr.hpp \
+ ../../../include/asio/detail/type_traits.hpp \
+ ../../../include/asio/socket_base.hpp \
+ ../../../include/asio/detail/io_control.hpp \
+ ../../../include/asio/detail/socket_option.hpp \
+ ../../../include/asio/datagram_socket_service.hpp \
+ ../../../include/asio/detail/reactive_socket_service.hpp \
+ ../../../include/asio/buffer.hpp \
+ ../../../include/asio/detail/array_fwd.hpp \
+ ../../../include/asio/detail/buffer_sequence_adapter.hpp \
+ ../../../include/asio/detail/impl/buffer_sequence_adapter.ipp \
+ ../../../include/asio/detail/reactive_null_buffers_op.hpp \
+ ../../../include/asio/detail/reactive_socket_accept_op.hpp \
+ ../../../include/asio/detail/socket_holder.hpp \
+ ../../../include/asio/detail/socket_ops.hpp \
+ ../../../include/asio/detail/shared_ptr.hpp \
+ ../../../include/asio/detail/weak_ptr.hpp \
+ ../../../include/asio/detail/impl/socket_ops.ipp \
+ ../../../include/asio/detail/reactive_socket_connect_op.hpp \
+ ../../../include/asio/detail/reactive_socket_recvfrom_op.hpp \
+ ../../../include/asio/detail/reactive_socket_sendto_op.hpp \
+ ../../../include/asio/detail/reactive_socket_service_base.hpp \
+ ../../../include/asio/detail/reactive_socket_recv_op.hpp \
+ ../../../include/asio/detail/reactive_socket_recvmsg_op.hpp \
+ ../../../include/asio/detail/reactive_socket_send_op.hpp \
+ ../../../include/asio/detail/impl/reactive_socket_service_base.ipp \
+ ../../../include/asio/basic_deadline_timer.hpp \
+ ../../../include/asio/basic_io_object.hpp \
+ ../../../include/asio/basic_raw_socket.hpp \
+ ../../../include/asio/raw_socket_service.hpp \
+ ../../../include/asio/basic_seq_packet_socket.hpp \
+ ../../../include/asio/seq_packet_socket_service.hpp \
+ ../../../include/asio/basic_serial_port.hpp \
+ ../../../include/asio/serial_port_base.hpp /usr/include/termios.h \
+ /usr/include/sys/termios.h /usr/include/sys/ttydefaults.h \
+ ../../../include/asio/impl/serial_port_base.hpp \
+ ../../../include/asio/impl/serial_port_base.ipp \
+ ../../../include/asio/serial_port_service.hpp \
+ ../../../include/asio/detail/reactive_serial_port_service.hpp \
+ ../../../include/asio/detail/descriptor_ops.hpp \
+ ../../../include/asio/detail/impl/descriptor_ops.ipp \
+ ../../../include/asio/detail/reactive_descriptor_service.hpp \
+ ../../../include/asio/detail/descriptor_read_op.hpp \
+ ../../../include/asio/detail/descriptor_write_op.hpp \
+ ../../../include/asio/detail/impl/reactive_descriptor_service.ipp \
+ ../../../include/asio/detail/impl/reactive_serial_port_service.ipp \
+ ../../../include/asio/detail/win_iocp_serial_port_service.hpp \
+ ../../../include/asio/basic_signal_set.hpp \
+ ../../../include/asio/signal_set_service.hpp \
+ ../../../include/asio/detail/signal_set_service.hpp \
+ /usr/include/signal.h ../../../include/asio/detail/signal_handler.hpp \
+ ../../../include/asio/detail/signal_op.hpp \
+ ../../../include/asio/detail/impl/signal_set_service.ipp \
+ ../../../include/asio/detail/signal_blocker.hpp \
+ ../../../include/asio/detail/posix_signal_blocker.hpp \
+ /opt/local/include/gcc5/c++/csignal \
+ ../../../include/asio/detail/static_mutex.hpp \
+ ../../../include/asio/detail/posix_static_mutex.hpp \
+ ../../../include/asio/basic_socket_acceptor.hpp \
+ ../../../include/asio/socket_acceptor_service.hpp \
+ ../../../include/asio/basic_socket_iostream.hpp \
+ ../../../include/asio/basic_socket_streambuf.hpp \
+ ../../../include/asio/deadline_timer_service.hpp \
+ ../../../include/asio/detail/array.hpp \
+ ../../../include/asio/stream_socket_service.hpp \
+ ../../../include/asio/steady_timer.hpp \
+ /opt/local/include/gcc5/c++/chrono /opt/local/include/gcc5/c++/ratio \
+ /opt/local/include/gcc5/c++/ctime \
+ /opt/local/include/gcc5/c++/bits/parse_numbers.h \
+ ../../../include/asio/basic_waitable_timer.hpp \
+ ../../../include/asio/wait_traits.hpp \
+ ../../../include/asio/waitable_timer_service.hpp \
+ ../../../include/asio/detail/chrono_time_traits.hpp \
+ ../../../include/asio/detail/cstdint.hpp \
+ ../../../include/asio/detail/deadline_timer_service.hpp \
+ ../../../include/asio/detail/timer_queue.hpp \
+ ../../../include/asio/detail/date_time_fwd.hpp \
+ ../../../include/asio/detail/timer_scheduler.hpp \
+ ../../../include/asio/detail/timer_scheduler_fwd.hpp \
+ ../../../include/asio/detail/wait_handler.hpp \
+ ../../../include/asio/basic_socket_streambuf.hpp \
+ ../../../include/asio/basic_stream_socket.hpp \
+ ../../../include/asio/basic_streambuf.hpp \
+ /opt/local/include/gcc5/c++/algorithm \
+ /opt/local/include/gcc5/c++/bits/stl_algo.h \
+ /opt/local/include/gcc5/c++/bits/algorithmfwd.h \
+ /opt/local/include/gcc5/c++/bits/stl_heap.h \
+ /opt/local/include/gcc5/c++/bits/uniform_int_dist.h \
+ ../../../include/asio/basic_streambuf_fwd.hpp \
+ ../../../include/asio/basic_waitable_timer.hpp \
+ ../../../include/asio/buffer.hpp \
+ ../../../include/asio/buffered_read_stream_fwd.hpp \
+ ../../../include/asio/buffered_read_stream.hpp \
+ ../../../include/asio/buffered_read_stream_fwd.hpp \
+ ../../../include/asio/detail/buffer_resize_guard.hpp \
+ ../../../include/asio/detail/buffered_stream_storage.hpp \
+ ../../../include/asio/impl/buffered_read_stream.hpp \
+ ../../../include/asio/buffered_stream_fwd.hpp \
+ ../../../include/asio/buffered_stream.hpp \
+ ../../../include/asio/buffered_read_stream.hpp \
+ ../../../include/asio/buffered_write_stream.hpp \
+ ../../../include/asio/buffered_write_stream_fwd.hpp \
+ ../../../include/asio/completion_condition.hpp \
+ ../../../include/asio/write.hpp ../../../include/asio/impl/write.hpp \
+ ../../../include/asio/detail/base_from_completion_cond.hpp \
+ ../../../include/asio/detail/consuming_buffers.hpp \
+ /opt/local/include/gcc5/c++/iterator \
+ /opt/local/include/gcc5/c++/bits/stream_iterator.h \
+ ../../../include/asio/detail/dependent_type.hpp \
+ ../../../include/asio/impl/buffered_write_stream.hpp \
+ ../../../include/asio/buffered_stream_fwd.hpp \
+ ../../../include/asio/buffered_write_stream_fwd.hpp \
+ ../../../include/asio/buffered_write_stream.hpp \
+ ../../../include/asio/buffers_iterator.hpp \
+ ../../../include/asio/completion_condition.hpp \
+ ../../../include/asio/connect.hpp ../../../include/asio/impl/connect.hpp \
+ ../../../include/asio/coroutine.hpp \
+ ../../../include/asio/datagram_socket_service.hpp \
+ ../../../include/asio/deadline_timer_service.hpp \
+ ../../../include/asio/deadline_timer.hpp ../../../include/asio/error.hpp \
+ ../../../include/asio/error_code.hpp \
+ ../../../include/asio/generic/basic_endpoint.hpp \
+ ../../../include/asio/generic/detail/endpoint.hpp \
+ ../../../include/asio/generic/detail/impl/endpoint.ipp \
+ ../../../include/asio/generic/datagram_protocol.hpp \
+ ../../../include/asio/basic_datagram_socket.hpp \
+ ../../../include/asio/generic/basic_endpoint.hpp \
+ ../../../include/asio/generic/raw_protocol.hpp \
+ ../../../include/asio/basic_raw_socket.hpp \
+ ../../../include/asio/generic/seq_packet_protocol.hpp \
+ ../../../include/asio/basic_seq_packet_socket.hpp \
+ ../../../include/asio/generic/stream_protocol.hpp \
+ ../../../include/asio/basic_socket_iostream.hpp \
+ ../../../include/asio/basic_stream_socket.hpp \
+ ../../../include/asio/handler_alloc_hook.hpp \
+ ../../../include/asio/handler_continuation_hook.hpp \
+ ../../../include/asio/handler_invoke_hook.hpp \
+ ../../../include/asio/handler_type.hpp \
+ ../../../include/asio/io_service.hpp \
+ ../../../include/asio/ip/address.hpp \
+ ../../../include/asio/ip/address_v4.hpp \
+ ../../../include/asio/detail/winsock_init.hpp \
+ ../../../include/asio/ip/impl/address_v4.hpp \
+ ../../../include/asio/ip/impl/address_v4.ipp \
+ ../../../include/asio/ip/address_v6.hpp \
+ ../../../include/asio/ip/impl/address_v6.hpp \
+ ../../../include/asio/ip/impl/address_v6.ipp \
+ ../../../include/asio/ip/impl/address.hpp \
+ ../../../include/asio/ip/impl/address.ipp \
+ ../../../include/asio/ip/address.hpp \
+ ../../../include/asio/ip/address_v4.hpp \
+ ../../../include/asio/ip/address_v6.hpp \
+ ../../../include/asio/ip/basic_endpoint.hpp \
+ ../../../include/asio/ip/detail/endpoint.hpp \
+ ../../../include/asio/ip/detail/impl/endpoint.ipp \
+ /opt/local/include/gcc5/c++/sstream \
+ /opt/local/include/gcc5/c++/bits/sstream.tcc \
+ ../../../include/asio/ip/impl/basic_endpoint.hpp \
+ ../../../include/asio/ip/basic_resolver.hpp \
+ ../../../include/asio/ip/basic_resolver_iterator.hpp \
+ ../../../include/asio/ip/basic_resolver_entry.hpp \
+ ../../../include/asio/ip/basic_resolver_query.hpp \
+ ../../../include/asio/ip/resolver_query_base.hpp \
+ ../../../include/asio/ip/resolver_service.hpp \
+ ../../../include/asio/detail/resolver_service.hpp \
+ ../../../include/asio/detail/resolve_endpoint_op.hpp \
+ ../../../include/asio/detail/resolve_op.hpp \
+ ../../../include/asio/detail/resolver_service_base.hpp \
+ ../../../include/asio/detail/thread.hpp \
+ ../../../include/asio/detail/posix_thread.hpp \
+ ../../../include/asio/detail/impl/posix_thread.ipp \
+ ../../../include/asio/detail/impl/resolver_service_base.ipp \
+ ../../../include/asio/ip/basic_resolver_entry.hpp \
+ ../../../include/asio/ip/basic_resolver_iterator.hpp \
+ ../../../include/asio/ip/basic_resolver_query.hpp \
+ ../../../include/asio/ip/host_name.hpp \
+ ../../../include/asio/ip/impl/host_name.ipp \
+ ../../../include/asio/ip/host_name.hpp ../../../include/asio/ip/icmp.hpp \
+ ../../../include/asio/ip/basic_endpoint.hpp \
+ ../../../include/asio/ip/basic_resolver.hpp \
+ ../../../include/asio/ip/multicast.hpp \
+ ../../../include/asio/ip/detail/socket_option.hpp \
+ ../../../include/asio/ip/resolver_query_base.hpp \
+ ../../../include/asio/ip/resolver_service.hpp \
+ ../../../include/asio/ip/tcp.hpp \
+ ../../../include/asio/basic_socket_acceptor.hpp \
+ ../../../include/asio/ip/udp.hpp ../../../include/asio/ip/unicast.hpp \
+ ../../../include/asio/ip/v6_only.hpp \
+ ../../../include/asio/is_read_buffered.hpp \
+ ../../../include/asio/is_write_buffered.hpp \
+ ../../../include/asio/local/basic_endpoint.hpp \
+ ../../../include/asio/local/detail/endpoint.hpp \
+ ../../../include/asio/local/detail/impl/endpoint.ipp \
+ ../../../include/asio/local/connect_pair.hpp \
+ ../../../include/asio/local/basic_endpoint.hpp \
+ ../../../include/asio/local/datagram_protocol.hpp \
+ ../../../include/asio/local/stream_protocol.hpp \
+ ../../../include/asio/placeholders.hpp \
+ ../../../include/asio/posix/basic_descriptor.hpp \
+ ../../../include/asio/posix/descriptor_base.hpp \
+ ../../../include/asio/posix/basic_stream_descriptor.hpp \
+ ../../../include/asio/posix/basic_descriptor.hpp \
+ ../../../include/asio/posix/stream_descriptor_service.hpp \
+ ../../../include/asio/posix/descriptor_base.hpp \
+ ../../../include/asio/posix/stream_descriptor.hpp \
+ ../../../include/asio/posix/basic_stream_descriptor.hpp \
+ ../../../include/asio/posix/stream_descriptor_service.hpp \
+ ../../../include/asio/raw_socket_service.hpp \
+ ../../../include/asio/read.hpp ../../../include/asio/impl/read.hpp \
+ ../../../include/asio/read_at.hpp ../../../include/asio/impl/read_at.hpp \
+ ../../../include/asio/read_until.hpp \
+ ../../../include/asio/basic_streambuf.hpp \
+ ../../../include/asio/detail/regex_fwd.hpp \
+ ../../../include/asio/impl/read_until.hpp \
+ ../../../include/asio/buffers_iterator.hpp \
+ ../../../include/asio/seq_packet_socket_service.hpp \
+ ../../../include/asio/serial_port.hpp \
+ ../../../include/asio/basic_serial_port.hpp \
+ ../../../include/asio/serial_port_base.hpp \
+ ../../../include/asio/serial_port_service.hpp \
+ ../../../include/asio/signal_set.hpp \
+ ../../../include/asio/basic_signal_set.hpp \
+ ../../../include/asio/signal_set_service.hpp \
+ ../../../include/asio/socket_acceptor_service.hpp \
+ ../../../include/asio/socket_base.hpp ../../../include/asio/strand.hpp \
+ ../../../include/asio/detail/strand_service.hpp \
+ ../../../include/asio/detail/impl/strand_service.hpp \
+ ../../../include/asio/detail/impl/strand_service.ipp \
+ ../../../include/asio/stream_socket_service.hpp \
+ ../../../include/asio/streambuf.hpp \
+ ../../../include/asio/system_error.hpp ../../../include/asio/thread.hpp \
+ ../../../include/asio/time_traits.hpp ../../../include/asio/version.hpp \
+ ../../../include/asio/wait_traits.hpp \
+ ../../../include/asio/waitable_timer_service.hpp \
+ ../../../include/asio/windows/basic_handle.hpp \
+ ../../../include/asio/windows/basic_object_handle.hpp \
+ ../../../include/asio/windows/basic_random_access_handle.hpp \
+ ../../../include/asio/windows/basic_stream_handle.hpp \
+ ../../../include/asio/windows/object_handle.hpp \
+ ../../../include/asio/windows/object_handle_service.hpp \
+ ../../../include/asio/windows/overlapped_ptr.hpp \
+ ../../../include/asio/windows/random_access_handle.hpp \
+ ../../../include/asio/windows/random_access_handle_service.hpp \
+ ../../../include/asio/windows/stream_handle.hpp \
+ ../../../include/asio/windows/stream_handle_service.hpp \
+ ../../../include/asio/write.hpp ../../../include/asio/write_at.hpp \
+ ../../../include/asio/impl/write_at.hpp
+
+/opt/local/include/gcc5/c++/cstdlib:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++config.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/os_defines.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/cpu_defines.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/Availability.h:
+
+/usr/include/AvailabilityInternal.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_symbol_aliasing.h:
+
+/usr/include/sys/_posix_availability.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/i386/_types.h:
+
+/usr/include/sys/_pthread/_pthread_types.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/_types/_pid_t.h:
+
+/usr/include/sys/_types/_id_t.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/i386/signal.h:
+
+/usr/include/machine/_mcontext.h:
+
+/usr/include/i386/_mcontext.h:
+
+/usr/include/mach/machine/_structs.h:
+
+/usr/include/mach/i386/_structs.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/i386/types.h:
+
+/usr/include/sys/_types/_int8_t.h:
+
+/usr/include/sys/_types/_int16_t.h:
+
+/usr/include/sys/_types/_int32_t.h:
+
+/usr/include/sys/_types/_int64_t.h:
+
+/usr/include/sys/_types/_u_int8_t.h:
+
+/usr/include/sys/_types/_u_int16_t.h:
+
+/usr/include/sys/_types/_u_int32_t.h:
+
+/usr/include/sys/_types/_u_int64_t.h:
+
+/usr/include/sys/_types/_intptr_t.h:
+
+/usr/include/sys/_types/_uintptr_t.h:
+
+/usr/include/sys/_pthread/_pthread_attr_t.h:
+
+/usr/include/sys/_types/_sigaltstack.h:
+
+/usr/include/sys/_types/_ucontext.h:
+
+/usr/include/sys/_types/_sigset_t.h:
+
+/usr/include/sys/_types/_size_t.h:
+
+/usr/include/sys/_types/_uid_t.h:
+
+/usr/include/sys/resource.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdint.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/stdint.h:
+
+/usr/include/_types/_uint8_t.h:
+
+/usr/include/_types/_uint16_t.h:
+
+/usr/include/_types/_uint32_t.h:
+
+/usr/include/_types/_uint64_t.h:
+
+/usr/include/_types/_intmax_t.h:
+
+/usr/include/_types/_uintmax_t.h:
+
+/usr/include/sys/_types/_timeval.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/i386/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/_OSByteOrder.h:
+
+/usr/include/libkern/i386/_OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/sys/_types/_ct_rune_t.h:
+
+/usr/include/sys/_types/_rune_t.h:
+
+/usr/include/sys/_types/_wchar_t.h:
+
+/usr/include/sys/_types/_null.h:
+
+/usr/include/sys/_types/_dev_t.h:
+
+/usr/include/sys/_types/_mode_t.h:
+
+/opt/local/include/gcc5/c++/cstring:
+
+/usr/include/string.h:
+
+/usr/include/sys/_types/_ssize_t.h:
+
+/usr/include/strings.h:
+
+/opt/local/include/gcc5/c++/iostream:
+
+/opt/local/include/gcc5/c++/ostream:
+
+/opt/local/include/gcc5/c++/ios:
+
+/opt/local/include/gcc5/c++/iosfwd:
+
+/opt/local/include/gcc5/c++/bits/stringfwd.h:
+
+/opt/local/include/gcc5/c++/bits/memoryfwd.h:
+
+/opt/local/include/gcc5/c++/bits/postypes.h:
+
+/opt/local/include/gcc5/c++/cwchar:
+
+/usr/include/wchar.h:
+
+/usr/include/sys/_types/_mbstate_t.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdarg.h:
+
+/usr/include/stdio.h:
+
+/usr/include/sys/_types/_va_list.h:
+
+/usr/include/sys/stdio.h:
+
+/usr/include/sys/_types/_off_t.h:
+
+/usr/include/time.h:
+
+/usr/include/sys/_types/_clock_t.h:
+
+/usr/include/sys/_types/_time_t.h:
+
+/usr/include/sys/_types/_timespec.h:
+
+/usr/include/_wctype.h:
+
+/usr/include/sys/_types/_wint_t.h:
+
+/usr/include/_types/_wctype_t.h:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+/opt/local/include/gcc5/c++/exception:
+
+/opt/local/include/gcc5/c++/bits/atomic_lockfree_defines.h:
+
+/opt/local/include/gcc5/c++/bits/exception_ptr.h:
+
+/opt/local/include/gcc5/c++/bits/exception_defines.h:
+
+/opt/local/include/gcc5/c++/bits/nested_exception.h:
+
+/opt/local/include/gcc5/c++/bits/char_traits.h:
+
+/opt/local/include/gcc5/c++/bits/stl_algobase.h:
+
+/opt/local/include/gcc5/c++/bits/functexcept.h:
+
+/opt/local/include/gcc5/c++/bits/cpp_type_traits.h:
+
+/opt/local/include/gcc5/c++/ext/type_traits.h:
+
+/opt/local/include/gcc5/c++/ext/numeric_traits.h:
+
+/opt/local/include/gcc5/c++/bits/stl_pair.h:
+
+/opt/local/include/gcc5/c++/bits/move.h:
+
+/opt/local/include/gcc5/c++/bits/concept_check.h:
+
+/opt/local/include/gcc5/c++/type_traits:
+
+/opt/local/include/gcc5/c++/bits/stl_iterator_base_types.h:
+
+/opt/local/include/gcc5/c++/bits/stl_iterator_base_funcs.h:
+
+/opt/local/include/gcc5/c++/debug/debug.h:
+
+/opt/local/include/gcc5/c++/bits/stl_iterator.h:
+
+/opt/local/include/gcc5/c++/bits/ptr_traits.h:
+
+/opt/local/include/gcc5/c++/bits/predefined_ops.h:
+
+/opt/local/include/gcc5/c++/cstdint:
+
+/opt/local/include/gcc5/c++/bits/localefwd.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++locale.h:
+
+/opt/local/include/gcc5/c++/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/_locale.h:
+
+/opt/local/include/gcc5/c++/cctype:
+
+/opt/local/include/gcc5/c++/bits/ios_base.h:
+
+/opt/local/include/gcc5/c++/ext/atomicity.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/gthr.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread/pthread_impl.h:
+
+/usr/include/pthread/sched.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sys/_pthread/_pthread_cond_t.h:
+
+/usr/include/sys/_pthread/_pthread_condattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_key_t.h:
+
+/usr/include/sys/_pthread/_pthread_mutex_t.h:
+
+/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_once_t.h:
+
+/usr/include/sys/_pthread/_pthread_rwlock_t.h:
+
+/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_t.h:
+
+/usr/include/pthread/qos.h:
+
+/usr/include/sys/qos.h:
+
+/usr/include/sys/_types/_mach_port_t.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/atomic_word.h:
+
+/opt/local/include/gcc5/c++/bits/locale_classes.h:
+
+/opt/local/include/gcc5/c++/string:
+
+/opt/local/include/gcc5/c++/bits/allocator.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/c++allocator.h:
+
+/opt/local/include/gcc5/c++/ext/new_allocator.h:
+
+/opt/local/include/gcc5/c++/new:
+
+/opt/local/include/gcc5/c++/bits/ostream_insert.h:
+
+/opt/local/include/gcc5/c++/bits/cxxabi_forced.h:
+
+/opt/local/include/gcc5/c++/bits/stl_function.h:
+
+/opt/local/include/gcc5/c++/backward/binders.h:
+
+/opt/local/include/gcc5/c++/bits/range_access.h:
+
+/opt/local/include/gcc5/c++/initializer_list:
+
+/opt/local/include/gcc5/c++/bits/basic_string.h:
+
+/opt/local/include/gcc5/c++/ext/alloc_traits.h:
+
+/opt/local/include/gcc5/c++/bits/alloc_traits.h:
+
+/opt/local/include/gcc5/c++/ext/string_conversions.h:
+
+/opt/local/include/gcc5/c++/cstdio:
+
+/opt/local/include/gcc5/c++/cerrno:
+
+/usr/include/errno.h:
+
+/usr/include/sys/errno.h:
+
+/opt/local/include/gcc5/c++/bits/functional_hash.h:
+
+/opt/local/include/gcc5/c++/bits/hash_bytes.h:
+
+/opt/local/include/gcc5/c++/bits/basic_string.tcc:
+
+/opt/local/include/gcc5/c++/bits/locale_classes.tcc:
+
+/opt/local/include/gcc5/c++/system_error:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/error_constants.h:
+
+/opt/local/include/gcc5/c++/stdexcept:
+
+/opt/local/include/gcc5/c++/streambuf:
+
+/opt/local/include/gcc5/c++/bits/streambuf.tcc:
+
+/opt/local/include/gcc5/c++/bits/basic_ios.h:
+
+/opt/local/include/gcc5/c++/bits/locale_facets.h:
+
+/opt/local/include/gcc5/c++/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/_types/_wctrans_t.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/ctype_base.h:
+
+/opt/local/include/gcc5/c++/bits/streambuf_iterator.h:
+
+/opt/local/include/gcc5/c++/x86_64-apple-darwin17/bits/ctype_inline.h:
+
+/opt/local/include/gcc5/c++/bits/locale_facets.tcc:
+
+/opt/local/include/gcc5/c++/bits/basic_ios.tcc:
+
+/opt/local/include/gcc5/c++/bits/ostream.tcc:
+
+/opt/local/include/gcc5/c++/istream:
+
+/opt/local/include/gcc5/c++/bits/istream.tcc:
+
+../../../include/asio.hpp:
+
+../../../include/asio/async_result.hpp:
+
+../../../include/asio/detail/config.hpp:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/_types/_posix_vdisable.h:
+
+/usr/include/sys/_types/_seek_set.h:
+
+/usr/include/sys/_types/_gid_t.h:
+
+/usr/include/sys/_types/_useconds_t.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_types/_fd_def.h:
+
+/usr/include/sys/_types/_suseconds_t.h:
+
+/usr/include/sys/_types/_fd_setsize.h:
+
+/usr/include/sys/_types/_fd_set.h:
+
+/usr/include/sys/_types/_fd_clr.h:
+
+/usr/include/sys/_types/_fd_isset.h:
+
+/usr/include/sys/_types/_fd_zero.h:
+
+/usr/include/sys/_types/_fd_copy.h:
+
+/usr/include/sys/_select.h:
+
+/usr/include/sys/_types/_uuid_t.h:
+
+/usr/include/gethostuuid.h:
+
+../../../include/asio/handler_type.hpp:
+
+../../../include/asio/detail/push_options.hpp:
+
+../../../include/asio/detail/pop_options.hpp:
+
+../../../include/asio/basic_datagram_socket.hpp:
+
+/opt/local/include/gcc5/c++/cstddef:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stddef.h:
+
+../../../include/asio/basic_socket.hpp:
+
+../../../include/asio/async_result.hpp:
+
+../../../include/asio/basic_io_object.hpp:
+
+../../../include/asio/io_service.hpp:
+
+/opt/local/include/gcc5/c++/typeinfo:
+
+../../../include/asio/detail/noncopyable.hpp:
+
+../../../include/asio/detail/wrapped_handler.hpp:
+
+../../../include/asio/detail/bind_handler.hpp:
+
+../../../include/asio/detail/handler_alloc_helpers.hpp:
+
+../../../include/asio/detail/addressof.hpp:
+
+/opt/local/include/gcc5/c++/memory:
+
+/opt/local/include/gcc5/c++/bits/stl_construct.h:
+
+/opt/local/include/gcc5/c++/bits/stl_uninitialized.h:
+
+/opt/local/include/gcc5/c++/bits/stl_tempbuf.h:
+
+/opt/local/include/gcc5/c++/bits/stl_raw_storage_iter.h:
+
+/opt/local/include/gcc5/c++/ext/concurrence.h:
+
+/opt/local/include/gcc5/c++/bits/uses_allocator.h:
+
+/opt/local/include/gcc5/c++/functional:
+
+/opt/local/include/gcc5/c++/tuple:
+
+/opt/local/include/gcc5/c++/utility:
+
+/opt/local/include/gcc5/c++/bits/stl_relops.h:
+
+/opt/local/include/gcc5/c++/array:
+
+/opt/local/include/gcc5/c++/bits/unique_ptr.h:
+
+/opt/local/include/gcc5/c++/bits/shared_ptr.h:
+
+/opt/local/include/gcc5/c++/bits/shared_ptr_base.h:
+
+/opt/local/include/gcc5/c++/bits/allocated_ptr.h:
+
+/opt/local/include/gcc5/c++/ext/aligned_buffer.h:
+
+/opt/local/include/gcc5/c++/bits/shared_ptr_atomic.h:
+
+/opt/local/include/gcc5/c++/bits/atomic_base.h:
+
+/opt/local/include/gcc5/c++/backward/auto_ptr.h:
+
+../../../include/asio/handler_alloc_hook.hpp:
+
+../../../include/asio/impl/handler_alloc_hook.ipp:
+
+../../../include/asio/detail/call_stack.hpp:
+
+../../../include/asio/detail/tss_ptr.hpp:
+
+../../../include/asio/detail/posix_tss_ptr.hpp:
+
+../../../include/asio/detail/impl/posix_tss_ptr.ipp:
+
+../../../include/asio/detail/throw_error.hpp:
+
+../../../include/asio/error_code.hpp:
+
+../../../include/asio/impl/error_code.ipp:
+
+../../../include/asio/detail/local_free_on_block_exit.hpp:
+
+../../../include/asio/detail/socket_types.hpp:
+
+/usr/include/sys/ioctl.h:
+
+/usr/include/sys/ttycom.h:
+
+/usr/include/sys/ioccom.h:
+
+/usr/include/sys/filio.h:
+
+/usr/include/sys/sockio.h:
+
+/usr/include/sys/poll.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/_types/_u_char.h:
+
+/usr/include/sys/_types/_u_short.h:
+
+/usr/include/sys/_types/_u_int.h:
+
+/usr/include/sys/_types/_caddr_t.h:
+
+/usr/include/sys/_types/_blkcnt_t.h:
+
+/usr/include/sys/_types/_blksize_t.h:
+
+/usr/include/sys/_types/_in_addr_t.h:
+
+/usr/include/sys/_types/_in_port_t.h:
+
+/usr/include/sys/_types/_ino_t.h:
+
+/usr/include/sys/_types/_ino64_t.h:
+
+/usr/include/sys/_types/_key_t.h:
+
+/usr/include/sys/_types/_nlink_t.h:
+
+/usr/include/sys/_types/_rsize_t.h:
+
+/usr/include/sys/_types/_errno_t.h:
+
+/usr/include/sys/_types/_fsblkcnt_t.h:
+
+/usr/include/sys/_types/_fsfilcnt_t.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/sys/_types/_s_ifmt.h:
+
+/usr/include/sys/_types/_filesec_t.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/sys/fcntl.h:
+
+/usr/include/sys/_types/_o_sync.h:
+
+/usr/include/sys/_types/_o_dsync.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/_param.h:
+
+/usr/include/i386/_param.h:
+
+/usr/include/net/net_kev.h:
+
+/usr/include/sys/_types/_sa_family_t.h:
+
+/usr/include/sys/_types/_socklen_t.h:
+
+/usr/include/sys/_types/_iovec_t.h:
+
+/usr/include/sys/uio.h:
+
+/usr/include/sys/un.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/netinet6/in6.h:
+
+/usr/include/netinet/tcp.h:
+
+/usr/include/arpa/inet.h:
+
+/usr/include/netdb.h:
+
+/usr/include/net/if.h:
+
+/usr/include/net/if_var.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/sys/_types/_timeval64.h:
+
+/usr/include/sys/queue.h:
+
+/usr/include/sys/_types/_timeval32.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/limits.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/i386/limits.h:
+
+/usr/include/i386/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+../../../include/asio/detail/impl/throw_error.ipp:
+
+../../../include/asio/detail/throw_exception.hpp:
+
+../../../include/asio/system_error.hpp:
+
+../../../include/asio/error.hpp:
+
+../../../include/asio/impl/error.ipp:
+
+../../../include/asio/detail/task_io_service_thread_info.hpp:
+
+../../../include/asio/detail/op_queue.hpp:
+
+../../../include/asio/detail/thread_info_base.hpp:
+
+/opt/local/include/gcc5/c++/climits:
+
+../../../include/asio/detail/handler_cont_helpers.hpp:
+
+../../../include/asio/handler_continuation_hook.hpp:
+
+../../../include/asio/detail/handler_invoke_helpers.hpp:
+
+../../../include/asio/handler_invoke_hook.hpp:
+
+../../../include/asio/impl/io_service.hpp:
+
+../../../include/asio/detail/handler_type_requirements.hpp:
+
+../../../include/asio/detail/service_registry.hpp:
+
+../../../include/asio/detail/mutex.hpp:
+
+../../../include/asio/detail/posix_mutex.hpp:
+
+../../../include/asio/detail/scoped_lock.hpp:
+
+../../../include/asio/detail/impl/posix_mutex.ipp:
+
+../../../include/asio/detail/impl/service_registry.hpp:
+
+../../../include/asio/detail/impl/service_registry.ipp:
+
+/opt/local/include/gcc5/c++/vector:
+
+/opt/local/include/gcc5/c++/bits/stl_vector.h:
+
+/opt/local/include/gcc5/c++/bits/stl_bvector.h:
+
+/opt/local/include/gcc5/c++/bits/vector.tcc:
+
+../../../include/asio/detail/task_io_service.hpp:
+
+../../../include/asio/detail/atomic_count.hpp:
+
+/opt/local/include/gcc5/c++/atomic:
+
+../../../include/asio/detail/event.hpp:
+
+../../../include/asio/detail/posix_event.hpp:
+
+../../../include/asio/detail/assert.hpp:
+
+/opt/local/include/gcc5/c++/cassert:
+
+/usr/include/assert.h:
+
+../../../include/asio/detail/impl/posix_event.ipp:
+
+../../../include/asio/detail/reactor_fwd.hpp:
+
+../../../include/asio/detail/task_io_service_operation.hpp:
+
+../../../include/asio/detail/handler_tracking.hpp:
+
+../../../include/asio/detail/impl/handler_tracking.ipp:
+
+../../../include/asio/detail/impl/task_io_service.hpp:
+
+../../../include/asio/detail/completion_handler.hpp:
+
+../../../include/asio/detail/fenced_block.hpp:
+
+../../../include/asio/detail/macos_fenced_block.hpp:
+
+/usr/include/libkern/OSAtomic.h:
+
+/usr/include/libkern/OSAtomicDeprecated.h:
+
+/opt/local/lib/gcc5/gcc/x86_64-apple-darwin17/5.5.0/include/stdbool.h:
+
+/usr/include/libkern/OSSpinLockDeprecated.h:
+
+/usr/include/libkern/OSAtomicQueue.h:
+
+../../../include/asio/detail/operation.hpp:
+
+../../../include/asio/detail/impl/task_io_service.ipp:
+
+../../../include/asio/detail/limits.hpp:
+
+/opt/local/include/gcc5/c++/limits:
+
+../../../include/asio/detail/reactor.hpp:
+
+../../../include/asio/detail/kqueue_reactor.hpp:
+
+/usr/include/sys/event.h:
+
+../../../include/asio/detail/object_pool.hpp:
+
+../../../include/asio/detail/reactor_op.hpp:
+
+../../../include/asio/detail/select_interrupter.hpp:
+
+../../../include/asio/detail/pipe_select_interrupter.hpp:
+
+../../../include/asio/detail/impl/pipe_select_interrupter.ipp:
+
+../../../include/asio/detail/timer_queue_base.hpp:
+
+../../../include/asio/detail/timer_queue_set.hpp:
+
+../../../include/asio/detail/impl/timer_queue_set.ipp:
+
+../../../include/asio/detail/wait_op.hpp:
+
+../../../include/asio/detail/impl/kqueue_reactor.hpp:
+
+../../../include/asio/detail/impl/kqueue_reactor.ipp:
+
+../../../include/asio/impl/io_service.ipp:
+
+../../../include/asio/detail/scoped_ptr.hpp:
+
+../../../include/asio/detail/type_traits.hpp:
+
+../../../include/asio/socket_base.hpp:
+
+../../../include/asio/detail/io_control.hpp:
+
+../../../include/asio/detail/socket_option.hpp:
+
+../../../include/asio/datagram_socket_service.hpp:
+
+../../../include/asio/detail/reactive_socket_service.hpp:
+
+../../../include/asio/buffer.hpp:
+
+../../../include/asio/detail/array_fwd.hpp:
+
+../../../include/asio/detail/buffer_sequence_adapter.hpp:
+
+../../../include/asio/detail/impl/buffer_sequence_adapter.ipp:
+
+../../../include/asio/detail/reactive_null_buffers_op.hpp:
+
+../../../include/asio/detail/reactive_socket_accept_op.hpp:
+
+../../../include/asio/detail/socket_holder.hpp:
+
+../../../include/asio/detail/socket_ops.hpp:
+
+../../../include/asio/detail/shared_ptr.hpp:
+
+../../../include/asio/detail/weak_ptr.hpp:
+
+../../../include/asio/detail/impl/socket_ops.ipp:
+
+../../../include/asio/detail/reactive_socket_connect_op.hpp:
+
+../../../include/asio/detail/reactive_socket_recvfrom_op.hpp:
+
+../../../include/asio/detail/reactive_socket_sendto_op.hpp:
+
+../../../include/asio/detail/reactive_socket_service_base.hpp:
+
+../../../include/asio/detail/reactive_socket_recv_op.hpp:
+
+../../../include/asio/detail/reactive_socket_recvmsg_op.hpp:
+
+../../../include/asio/detail/reactive_socket_send_op.hpp:
+
+../../../include/asio/detail/impl/reactive_socket_service_base.ipp:
+
+../../../include/asio/basic_deadline_timer.hpp:
+
+../../../include/asio/basic_io_object.hpp:
+
+../../../include/asio/basic_raw_socket.hpp:
+
+../../../include/asio/raw_socket_service.hpp:
+
+../../../include/asio/basic_seq_packet_socket.hpp:
+
+../../../include/asio/seq_packet_socket_service.hpp:
+
+../../../include/asio/basic_serial_port.hpp:
+
+../../../include/asio/serial_port_base.hpp:
+
+/usr/include/termios.h:
+
+/usr/include/sys/termios.h:
+
+/usr/include/sys/ttydefaults.h:
+
+../../../include/asio/impl/serial_port_base.hpp:
+
+../../../include/asio/impl/serial_port_base.ipp:
+
+../../../include/asio/serial_port_service.hpp:
+
+../../../include/asio/detail/reactive_serial_port_service.hpp:
+
+../../../include/asio/detail/descriptor_ops.hpp:
+
+../../../include/asio/detail/impl/descriptor_ops.ipp:
+
+../../../include/asio/detail/reactive_descriptor_service.hpp:
+
+../../../include/asio/detail/descriptor_read_op.hpp:
+
+../../../include/asio/detail/descriptor_write_op.hpp:
+
+../../../include/asio/detail/impl/reactive_descriptor_service.ipp:
+
+../../../include/asio/detail/impl/reactive_serial_port_service.ipp:
+
+../../../include/asio/detail/win_iocp_serial_port_service.hpp:
+
+../../../include/asio/basic_signal_set.hpp:
+
+../../../include/asio/signal_set_service.hpp:
+
+../../../include/asio/detail/signal_set_service.hpp:
+
+/usr/include/signal.h:
+
+../../../include/asio/detail/signal_handler.hpp:
+
+../../../include/asio/detail/signal_op.hpp:
+
+../../../include/asio/detail/impl/signal_set_service.ipp:
+
+../../../include/asio/detail/signal_blocker.hpp:
+
+../../../include/asio/detail/posix_signal_blocker.hpp:
+
+/opt/local/include/gcc5/c++/csignal:
+
+../../../include/asio/detail/static_mutex.hpp:
+
+../../../include/asio/detail/posix_static_mutex.hpp:
+
+../../../include/asio/basic_socket_acceptor.hpp:
+
+../../../include/asio/socket_acceptor_service.hpp:
+
+../../../include/asio/basic_socket_iostream.hpp:
+
+../../../include/asio/basic_socket_streambuf.hpp:
+
+../../../include/asio/deadline_timer_service.hpp:
+
+../../../include/asio/detail/array.hpp:
+
+../../../include/asio/stream_socket_service.hpp:
+
+../../../include/asio/steady_timer.hpp:
+
+/opt/local/include/gcc5/c++/chrono:
+
+/opt/local/include/gcc5/c++/ratio:
+
+/opt/local/include/gcc5/c++/ctime:
+
+/opt/local/include/gcc5/c++/bits/parse_numbers.h:
+
+../../../include/asio/basic_waitable_timer.hpp:
+
+../../../include/asio/wait_traits.hpp:
+
+../../../include/asio/waitable_timer_service.hpp:
+
+../../../include/asio/detail/chrono_time_traits.hpp:
+
+../../../include/asio/detail/cstdint.hpp:
+
+../../../include/asio/detail/deadline_timer_service.hpp:
+
+../../../include/asio/detail/timer_queue.hpp:
+
+../../../include/asio/detail/date_time_fwd.hpp:
+
+../../../include/asio/detail/timer_scheduler.hpp:
+
+../../../include/asio/detail/timer_scheduler_fwd.hpp:
+
+../../../include/asio/detail/wait_handler.hpp:
+
+../../../include/asio/basic_socket_streambuf.hpp:
+
+../../../include/asio/basic_stream_socket.hpp:
+
+../../../include/asio/basic_streambuf.hpp:
+
+/opt/local/include/gcc5/c++/algorithm:
+
+/opt/local/include/gcc5/c++/bits/stl_algo.h:
+
+/opt/local/include/gcc5/c++/bits/algorithmfwd.h:
+
+/opt/local/include/gcc5/c++/bits/stl_heap.h:
+
+/opt/local/include/gcc5/c++/bits/uniform_int_dist.h:
+
+../../../include/asio/basic_streambuf_fwd.hpp:
+
+../../../include/asio/basic_waitable_timer.hpp:
+
+../../../include/asio/buffer.hpp:
+
+../../../include/asio/buffered_read_stream_fwd.hpp:
+
+../../../include/asio/buffered_read_stream.hpp:
+
+../../../include/asio/buffered_read_stream_fwd.hpp:
+
+../../../include/asio/detail/buffer_resize_guard.hpp:
+
+../../../include/asio/detail/buffered_stream_storage.hpp:
+
+../../../include/asio/impl/buffered_read_stream.hpp:
+
+../../../include/asio/buffered_stream_fwd.hpp:
+
+../../../include/asio/buffered_stream.hpp:
+
+../../../include/asio/buffered_read_stream.hpp:
+
+../../../include/asio/buffered_write_stream.hpp:
+
+../../../include/asio/buffered_write_stream_fwd.hpp:
+
+../../../include/asio/completion_condition.hpp:
+
+../../../include/asio/write.hpp:
+
+../../../include/asio/impl/write.hpp:
+
+../../../include/asio/detail/base_from_completion_cond.hpp:
+
+../../../include/asio/detail/consuming_buffers.hpp:
+
+/opt/local/include/gcc5/c++/iterator:
+
+/opt/local/include/gcc5/c++/bits/stream_iterator.h:
+
+../../../include/asio/detail/dependent_type.hpp:
+
+../../../include/asio/impl/buffered_write_stream.hpp:
+
+../../../include/asio/buffered_stream_fwd.hpp:
+
+../../../include/asio/buffered_write_stream_fwd.hpp:
+
+../../../include/asio/buffered_write_stream.hpp:
+
+../../../include/asio/buffers_iterator.hpp:
+
+../../../include/asio/completion_condition.hpp:
+
+../../../include/asio/connect.hpp:
+
+../../../include/asio/impl/connect.hpp:
+
+../../../include/asio/coroutine.hpp:
+
+../../../include/asio/datagram_socket_service.hpp:
+
+../../../include/asio/deadline_timer_service.hpp:
+
+../../../include/asio/deadline_timer.hpp:
+
+../../../include/asio/error.hpp:
+
+../../../include/asio/error_code.hpp:
+
+../../../include/asio/generic/basic_endpoint.hpp:
+
+../../../include/asio/generic/detail/endpoint.hpp:
+
+../../../include/asio/generic/detail/impl/endpoint.ipp:
+
+../../../include/asio/generic/datagram_protocol.hpp:
+
+../../../include/asio/basic_datagram_socket.hpp:
+
+../../../include/asio/generic/basic_endpoint.hpp:
+
+../../../include/asio/generic/raw_protocol.hpp:
+
+../../../include/asio/basic_raw_socket.hpp:
+
+../../../include/asio/generic/seq_packet_protocol.hpp:
+
+../../../include/asio/basic_seq_packet_socket.hpp:
+
+../../../include/asio/generic/stream_protocol.hpp:
+
+../../../include/asio/basic_socket_iostream.hpp:
+
+../../../include/asio/basic_stream_socket.hpp:
+
+../../../include/asio/handler_alloc_hook.hpp:
+
+../../../include/asio/handler_continuation_hook.hpp:
+
+../../../include/asio/handler_invoke_hook.hpp:
+
+../../../include/asio/handler_type.hpp:
+
+../../../include/asio/io_service.hpp:
+
+../../../include/asio/ip/address.hpp:
+
+../../../include/asio/ip/address_v4.hpp:
+
+../../../include/asio/detail/winsock_init.hpp:
+
+../../../include/asio/ip/impl/address_v4.hpp:
+
+../../../include/asio/ip/impl/address_v4.ipp:
+
+../../../include/asio/ip/address_v6.hpp:
+
+../../../include/asio/ip/impl/address_v6.hpp:
+
+../../../include/asio/ip/impl/address_v6.ipp:
+
+../../../include/asio/ip/impl/address.hpp:
+
+../../../include/asio/ip/impl/address.ipp:
+
+../../../include/asio/ip/address.hpp:
+
+../../../include/asio/ip/address_v4.hpp:
+
+../../../include/asio/ip/address_v6.hpp:
+
+../../../include/asio/ip/basic_endpoint.hpp:
+
+../../../include/asio/ip/detail/endpoint.hpp:
+
+../../../include/asio/ip/detail/impl/endpoint.ipp:
+
+/opt/local/include/gcc5/c++/sstream:
+
+/opt/local/include/gcc5/c++/bits/sstream.tcc:
+
+../../../include/asio/ip/impl/basic_endpoint.hpp:
+
+../../../include/asio/ip/basic_resolver.hpp:
+
+../../../include/asio/ip/basic_resolver_iterator.hpp:
+
+../../../include/asio/ip/basic_resolver_entry.hpp:
+
+../../../include/asio/ip/basic_resolver_query.hpp:
+
+../../../include/asio/ip/resolver_query_base.hpp:
+
+../../../include/asio/ip/resolver_service.hpp:
+
+../../../include/asio/detail/resolver_service.hpp:
+
+../../../include/asio/detail/resolve_endpoint_op.hpp:
+
+../../../include/asio/detail/resolve_op.hpp:
+
+../../../include/asio/detail/resolver_service_base.hpp:
+
+../../../include/asio/detail/thread.hpp:
+
+../../../include/asio/detail/posix_thread.hpp:
+
+../../../include/asio/detail/impl/posix_thread.ipp:
+
+../../../include/asio/detail/impl/resolver_service_base.ipp:
+
+../../../include/asio/ip/basic_resolver_entry.hpp:
+
+../../../include/asio/ip/basic_resolver_iterator.hpp:
+
+../../../include/asio/ip/basic_resolver_query.hpp:
+
+../../../include/asio/ip/host_name.hpp:
+
+../../../include/asio/ip/impl/host_name.ipp:
+
+../../../include/asio/ip/host_name.hpp:
+
+../../../include/asio/ip/icmp.hpp:
+
+../../../include/asio/ip/basic_endpoint.hpp:
+
+../../../include/asio/ip/basic_resolver.hpp:
+
+../../../include/asio/ip/multicast.hpp:
+
+../../../include/asio/ip/detail/socket_option.hpp:
+
+../../../include/asio/ip/resolver_query_base.hpp:
+
+../../../include/asio/ip/resolver_service.hpp:
+
+../../../include/asio/ip/tcp.hpp:
+
+../../../include/asio/basic_socket_acceptor.hpp:
+
+../../../include/asio/ip/udp.hpp:
+
+../../../include/asio/ip/unicast.hpp:
+
+../../../include/asio/ip/v6_only.hpp:
+
+../../../include/asio/is_read_buffered.hpp:
+
+../../../include/asio/is_write_buffered.hpp:
+
+../../../include/asio/local/basic_endpoint.hpp:
+
+../../../include/asio/local/detail/endpoint.hpp:
+
+../../../include/asio/local/detail/impl/endpoint.ipp:
+
+../../../include/asio/local/connect_pair.hpp:
+
+../../../include/asio/local/basic_endpoint.hpp:
+
+../../../include/asio/local/datagram_protocol.hpp:
+
+../../../include/asio/local/stream_protocol.hpp:
+
+../../../include/asio/placeholders.hpp:
+
+../../../include/asio/posix/basic_descriptor.hpp:
+
+../../../include/asio/posix/descriptor_base.hpp:
+
+../../../include/asio/posix/basic_stream_descriptor.hpp:
+
+../../../include/asio/posix/basic_descriptor.hpp:
+
+../../../include/asio/posix/stream_descriptor_service.hpp:
+
+../../../include/asio/posix/descriptor_base.hpp:
+
+../../../include/asio/posix/stream_descriptor.hpp:
+
+../../../include/asio/posix/basic_stream_descriptor.hpp:
+
+../../../include/asio/posix/stream_descriptor_service.hpp:
+
+../../../include/asio/raw_socket_service.hpp:
+
+../../../include/asio/read.hpp:
+
+../../../include/asio/impl/read.hpp:
+
+../../../include/asio/read_at.hpp:
+
+../../../include/asio/impl/read_at.hpp:
+
+../../../include/asio/read_until.hpp:
+
+../../../include/asio/basic_streambuf.hpp:
+
+../../../include/asio/detail/regex_fwd.hpp:
+
+../../../include/asio/impl/read_until.hpp:
+
+../../../include/asio/buffers_iterator.hpp:
+
+../../../include/asio/seq_packet_socket_service.hpp:
+
+../../../include/asio/serial_port.hpp:
+
+../../../include/asio/basic_serial_port.hpp:
+
+../../../include/asio/serial_port_base.hpp:
+
+../../../include/asio/serial_port_service.hpp:
+
+../../../include/asio/signal_set.hpp:
+
+../../../include/asio/basic_signal_set.hpp:
+
+../../../include/asio/signal_set_service.hpp:
+
+../../../include/asio/socket_acceptor_service.hpp:
+
+../../../include/asio/socket_base.hpp:
+
+../../../include/asio/strand.hpp:
+
+../../../include/asio/detail/strand_service.hpp:
+
+../../../include/asio/detail/impl/strand_service.hpp:
+
+../../../include/asio/detail/impl/strand_service.ipp:
+
+../../../include/asio/stream_socket_service.hpp:
+
+../../../include/asio/streambuf.hpp:
+
+../../../include/asio/system_error.hpp:
+
+../../../include/asio/thread.hpp:
+
+../../../include/asio/time_traits.hpp:
+
+../../../include/asio/version.hpp:
+
+../../../include/asio/wait_traits.hpp:
+
+../../../include/asio/waitable_timer_service.hpp:
+
+../../../include/asio/windows/basic_handle.hpp:
+
+../../../include/asio/windows/basic_object_handle.hpp:
+
+../../../include/asio/windows/basic_random_access_handle.hpp:
+
+../../../include/asio/windows/basic_stream_handle.hpp:
+
+../../../include/asio/windows/object_handle.hpp:
+
+../../../include/asio/windows/object_handle_service.hpp:
+
+../../../include/asio/windows/overlapped_ptr.hpp:
+
+../../../include/asio/windows/random_access_handle.hpp:
+
+../../../include/asio/windows/random_access_handle_service.hpp:
+
+../../../include/asio/windows/stream_handle.hpp:
+
+../../../include/asio/windows/stream_handle_service.hpp:
+
+../../../include/asio/write.hpp:
+
+../../../include/asio/write_at.hpp:
+
+../../../include/asio/impl/write_at.hpp:

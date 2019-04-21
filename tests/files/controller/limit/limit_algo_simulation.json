@@ -1,0 +1,24 @@
+{
+  "time" : {
+    "history_min" : 1,
+    "start_time" : "2017-11-01T01:00:00.000Z",
+    "end_time" : "2017-11-30T23:00:00.000Z"
+  },
+  "algo" : 1,
+  "exchanges" : {
+    "COINBASE" : {
+      "trading_pairs" : [
+        "BTC-USD"
+      ],
+      "accounts" : {
+        "BTC" : 1,
+        "USD" : 10000
+      }
+    }
+  },
+  "mode" : 0,
+  "universe" : {
+    "vol_fraction" : 0.3,
+    "max_order_delay_ms" : 40
+  }
+}

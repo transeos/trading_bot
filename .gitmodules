@@ -1,0 +1,27 @@
+[submodule "3rdparty/Catch2"]
+	path = 3rdparty/Catch2
+	url = https://github.com/catchorg/Catch2
+[submodule "3rdparty/Simple-Iterator-Template"]
+	path = 3rdparty/Simple-Iterator-Template
+	url = https://github.com/VinGarcia/Simple-Iterator-Template
+[submodule "3rdparty/cotire"]
+	path = 3rdparty/cotire
+	url = https://github.com/sakra/cotire
+[submodule "3rdparty/cpp-driver"]
+	path = 3rdparty/cpp-driver
+	url = https://github.com/datastax/cpp-driver
+[submodule "3rdparty/cryptopp"]
+	path = 3rdparty/cryptopp
+	url = https://github.com/weidai11/cryptopp
+[submodule "3rdparty/fast-cpp-csv-parser"]
+	path = 3rdparty/fast-cpp-csv-parser
+	url = https://github.com/ben-strasser/fast-cpp-csv-parser
+[submodule "3rdparty/thread-pool"]
+	path = 3rdparty/thread-pool
+	url = https://github.com/subhagato/thread-pool
+[submodule "3rdparty/ta-lib-rt"]
+	path = 3rdparty/ta-lib-rt
+	url = https://github.com/trufanov-nok/ta-lib-rt
+[submodule "3rdparty/json"]
+	path = 3rdparty/json
+	url = https://github.com/nlohmann/json
