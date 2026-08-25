@@ -158,11 +158,9 @@ because the driver's `FindLibuv` only searches that hint.
       -DCASS_BUILD_EXAMPLES=OFF -DCASS_BUILD_TESTS=OFF -DCASS_INSTALL_PKG_CONFIG=OFF
     cmake --build 3rdparty/cpp-driver/build --config Release --target install
 
-> **Note (CMake >= 4.0):** the cpp-driver (2018) forces a few very old CMake
-> policies to `OLD`, which CMake 4.x rejects. `cmake/modules/CppDriver.cmake` in
-> this tree already guards those `cmake_policy(SET CMP0042/CMP0048/CMP0054 OLD)`
-> calls with `AND CMAKE_VERSION VERSION_LESS "4.0"`. If you build from a fresh
-> submodule checkout and hit a `cmake_policy` error, apply the same guard.
+> `-DCMAKE_POLICY_VERSION_MINIMUM=3.5` lets recent CMake (4.x) configure the
+> driver's older `cmake_minimum_required`. (cpp-driver 2.17.1 no longer forces
+> any CMake policy to `OLD`, so no source patch is needed.)
 
 ## configure and build the application
 

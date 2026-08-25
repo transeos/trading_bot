@@ -12,10 +12,7 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /opt/local/lib)
 # Compiler configuration
 # ---------------------------------------------------------------------------
 if(MSVC)
-  # /FI force-includes the cross-platform shim into every translation unit so
-  # the (originally Linux/GCC) sources build unmodified under MSVC.
-  add_compile_options(/EHsc /bigobj /utf-8 /Zc:__cplusplus
-                      /FI${CMAKE_SOURCE_DIR}/lib/include/utils/PlatformCompat.h)
+  add_compile_options(/EHsc /bigobj /utf-8 /Zc:__cplusplus)
   add_compile_definitions(
     DEBUG
     NOMINMAX
@@ -27,6 +24,11 @@ if(MSVC)
     _WINSOCK_DEPRECATED_NO_WARNINGS
     _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
     ASIO_STANDALONE)
+  # Force-include the cross-platform shim into every translation unit of *our*
+  # targets so the (originally Linux/GCC) sources build unmodified. Applied
+  # per-target (below) rather than globally so it does not leak into third-party
+  # subdirectories such as Catch2.
+  set(CT_FORCE_INCLUDE /FI${CMAKE_SOURCE_DIR}/lib/include/utils/PlatformCompat.h)
 else()
   #set(CMAKE_CXX_FLAGS "-g -DDEBUG -pthread -fsanitize=address")
   set(CMAKE_CXX_FLAGS "-g -DDEBUG -pthread -Werror -Wall -Wno-unused-function")
@@ -103,17 +105,23 @@ add_subdirectory(lib)
 include_directories(lib/include)
 include_directories(lib/src)
 
-add_library(Catch2 INTERFACE)
+# Catch2 v3 is a compiled library (no longer a single header); build it from the
+# submodule and link Catch2::Catch2WithMain, which also provides main().
+add_subdirectory(3rdparty/Catch2)
 file(GLOB TEST_SOURCES tests/*.cpp)
-
-target_include_directories(Catch2 INTERFACE 3rdparty/Catch2/single_include)
 
 add_executable(cryptotrader bin/main.cpp)
 target_link_libraries(cryptotrader TraderBot)
 
 # create test executable
 add_executable(test_cryptotrader ${TEST_SOURCES})
-target_link_libraries(test_cryptotrader TraderBot Catch2)
+target_link_libraries(test_cryptotrader TraderBot Catch2::Catch2WithMain)
+
+# force-include the platform shim into our own targets only (see CT_FORCE_INCLUDE)
+if(MSVC)
+  target_compile_options(cryptotrader PRIVATE ${CT_FORCE_INCLUDE})
+  target_compile_options(test_cryptotrader PRIVATE ${CT_FORCE_INCLUDE})
+endif()
 
 enable_testing()
 add_test(NAME AllTests COMMAND test_cryptotrader)

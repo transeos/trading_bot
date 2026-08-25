@@ -9,7 +9,7 @@
 // This consists test code for handling CSV.
 
 #include "TraderBot.h"
-#include <catch2/catch.hpp>
+#include <catch2/catch_test_macros.hpp>
 
 using namespace std;
 
