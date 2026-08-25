@@ -16,11 +16,28 @@
 #include "dbServer.h"
 #include "exchanges/GDAX.h"
 #include "exchanges/Gemini.h"
+#include <csignal>
+#include <filesystem>
 
 #define CONFIG_FILE "configs/static_config.json"
 
 using namespace std;
 
+#ifdef _WIN32
+// Windows has no POSIX job-control signals (SIGTSTP/SIGCONT) nor sigprocmask/
+// kill. Only SIGINT is meaningful here: wait for any in-progress critical task
+// to finish, then restore the default handler and re-raise so the process exits
+// the way it would on POSIX.
+void signal_handler(int signal) {
+  std::signal(signal, SIG_DFL);
+  std::thread t([=] {
+    g_critcal_task.lock();
+    raise(signal);
+    g_critcal_task.unlock();
+  });
+  t.detach();
+}
+#else
 void signal_handler(int signal) {
   sigset_t signalmask;
   sigemptyset(&signalmask);
@@ -41,6 +58,7 @@ void signal_handler(int signal) {
     t.detach();
   }
 }
+#endif
 
 void TraderBot::captureGDAX() {
   COUT << CGREEN << endl << "Capturing data from Coinbase..." << endl;
@@ -161,8 +179,10 @@ int TraderBot::traderMain(const int argc, const char** argv) {
   resetGlobals();
 
   std::signal(SIGINT, signal_handler);
+#ifndef _WIN32
   std::signal(SIGTSTP, signal_handler);
   std::signal(SIGCONT, signal_handler);
+#endif
 
   // process arguments
   // argc = number of arguments + 1
@@ -174,10 +194,9 @@ int TraderBot::traderMain(const int argc, const char** argv) {
     assert(!argc);
 
   // create new controller directory
-  string command = "rm -rf ";
-  command += CTRL_LOG;
-  const int exit_code = system(command.c_str());
-  if (exit_code) DEL_DIR_ERROR(CTRL_LOG);
+  std::error_code remove_ec;
+  std::filesystem::remove_all(CTRL_LOG, remove_ec);
+  if (remove_ec) DEL_DIR_ERROR(CTRL_LOG);
   TradeUtils::createDir(CTRL_LOG);
 
   // initialize

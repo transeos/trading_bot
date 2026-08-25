@@ -26,8 +26,9 @@
 #include <sstream>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <unistd.h>
 #include <utility>
+// getcwd(): <unistd.h> on POSIX, _getcwd() shim on Windows.
+#include "utils/PlatformCompat.h"
 #include <vector>
 
 //#define CONVERT_ERROR_TO_ASSERT
@@ -56,21 +57,21 @@
 #define SU_ ((char)143)
 #define _SU ((char)144)
 
-static std::vector<std::pair<std::string, std::string>> color_mapping = {{"\e[30m", "<font color=\"black\">"},
-                                                                         {"\e[31m", "<font color=\"red\">"},
-                                                                         {"\e[32m", "<font color=\"green\">"},
-                                                                         {"\e[33m", "<font color=\"yellow\">"},
-                                                                         {"\e[34m", "<font color=\"blue\">"},
-                                                                         {"\e[35m", "<font color=\"magenta\">"},
-                                                                         {"\e[36m", "<font color=\"cyan\">"},
-                                                                         {"\e[37m", "<font color=\"white\">"},
-                                                                         {"\e[0m", "</font>"},
-                                                                         {"\e[1m", "<b>"},
-                                                                         {"\e[21m", "</b>"},
-                                                                         {"\e[3m", "<i>"},
-                                                                         {"\e[23m", "</i>"},
-                                                                         {"\e[4m", "<u>"},
-                                                                         {"\e[24m", "</u>"}};
+static std::vector<std::pair<std::string, std::string>> color_mapping = {{"\033[30m", "<font color=\"black\">"},
+                                                                         {"\033[31m", "<font color=\"red\">"},
+                                                                         {"\033[32m", "<font color=\"green\">"},
+                                                                         {"\033[33m", "<font color=\"yellow\">"},
+                                                                         {"\033[34m", "<font color=\"blue\">"},
+                                                                         {"\033[35m", "<font color=\"magenta\">"},
+                                                                         {"\033[36m", "<font color=\"cyan\">"},
+                                                                         {"\033[37m", "<font color=\"white\">"},
+                                                                         {"\033[0m", "</font>"},
+                                                                         {"\033[1m", "<b>"},
+                                                                         {"\033[21m", "</b>"},
+                                                                         {"\033[3m", "<i>"},
+                                                                         {"\033[23m", "</i>"},
+                                                                         {"\033[4m", "<u>"},
+                                                                         {"\033[24m", "</u>"}};
 
 // log files
 #define TEXTLOG "TraderBotLog.txt"
@@ -232,7 +233,7 @@ class Logger {
       }
     }
 
-    if (color_used) std::cout << "\e[0m";  // clear formatting in the end
+    if (color_used) std::cout << "\033[0m";  // clear formatting in the end
 
     std::cout << std::flush;
     return color_used;
@@ -290,22 +291,22 @@ struct PRINT {
 
 #else  // Logger disabled
 
-#define CBLACK "\e[30m"
-#define CRED "\e[31m"
-#define CGREEN "\e[32m"
-#define CYELLOW "\e[33m"
-#define CBLUE "\e[34m"
-#define CMAGENTA "\e[35m"
-#define CCYAN "\e[36m"
-#define CWHITE "\e[37m"
-#define CRESET "\e[0m"
+#define CBLACK "\033[30m"
+#define CRED "\033[31m"
+#define CGREEN "\033[32m"
+#define CYELLOW "\033[33m"
+#define CBLUE "\033[34m"
+#define CMAGENTA "\033[35m"
+#define CCYAN "\033[36m"
+#define CWHITE "\033[37m"
+#define CRESET "\033[0m"
 
-#define SB_ "\e[1m"
-#define _SB "\e[21m"
-#define SI_ "\e[3m"
-#define _SI "\e[23m"
-#define SU_ "\e[4m"
-#define _SU "\e[24m"
+#define SB_ "\033[1m"
+#define _SB "\033[21m"
+#define SI_ "\033[3m"
+#define _SI "\033[23m"
+#define SU_ "\033[4m"
+#define _SU "\033[24m"
 
 struct EXIT {
   int m_code;

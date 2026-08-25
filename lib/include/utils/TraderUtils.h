@@ -13,6 +13,7 @@
 #define CRYPTOTRADER_TRADERUTILS_H
 
 #include <cmath>
+#include <ctime>
 #include <iostream>
 #include <vector>
 

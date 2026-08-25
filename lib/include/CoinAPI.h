@@ -88,6 +88,7 @@ class CoinAPI {
   // TODO
   bool disconnectWebsocket() {
     assert(0);
+    return false;  // unreachable; asserts above. Explicit return keeps MSVC happy.
   }
 
   CoinAPIHistory& getHistory() {

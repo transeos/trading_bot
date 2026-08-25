@@ -14,8 +14,9 @@
 #include <iomanip>
 #include <iostream>
 #include <regex>
-#include <sys/time.h>
 #include <thread>
+// timespec / clock_gettime / timegm: <sys/time.h> on POSIX, shims on Windows.
+#include "utils/PlatformCompat.h"
 
 const unsigned long MAX_USECS = 1000000L;
 

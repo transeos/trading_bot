@@ -12,6 +12,7 @@
 #include "Globals.h"
 #include "utils/StringUtils.h"
 #include "utils/TimeUtils.h"
+#include <filesystem>
 #include <sys/stat.h>
 
 using namespace std;
@@ -240,7 +241,9 @@ time_t getTimeInSecs(const int a_yr, const int a_month, const int a_mday, const 
   time_info->tm_min = a_min;
   time_info->tm_sec = a_sec;
 
-  return (mktime(time_info) + time_info->tm_gmtoff);
+  // The tm fields above are UTC, so convert straight back with timegm() rather
+  // than mktime()+tm_gmtoff (tm_gmtoff is a glibc extension absent on MSVC).
+  return timegm(time_info);
 }
 
 // It can be used for both files and folders.
@@ -360,10 +363,13 @@ int getUUIDHash(const string& a_uuid, const int a_numbits) {
 }
 
 bool createDir(const string& a_dir) {
-  const string command = "mkdir -p " + a_dir;
-  const int exit_code = system(command.c_str());
+  // Cross-platform recursive mkdir (equivalent to "mkdir -p"). create_directories
+  // succeeds and returns false when the directory already exists, which is not an
+  // error, so distinguish that case via the error_code overload.
+  std::error_code ec;
+  std::filesystem::create_directories(a_dir, ec);
 
-  if (exit_code) {
+  if (ec) {
     ASSERT(0);
     return false;
   }
