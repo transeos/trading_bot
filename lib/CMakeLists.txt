@@ -41,6 +41,11 @@ add_library(TraderBot ${TRADERBOT_LIB_TYPE} ${MAIN_SRC_FILES}
         ${TRIGGER_SRC_FILES}
         ${TRIGGER_HEADER_FILES})
 
+# force-include the platform shim (Windows); set in the top-level CMakeLists.txt
+if(MSVC)
+  target_compile_options(TraderBot PRIVATE ${CT_FORCE_INCLUDE})
+endif()
+
 # link third party libraries
 target_link_libraries(TraderBot PUBLIC
 								CURL::libcurl

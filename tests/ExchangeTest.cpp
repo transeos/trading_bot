@@ -17,7 +17,7 @@
 #include "TraderBot.h"
 #include "exchanges/GDAX.h"
 #include "exchanges/Gemini.h"
-#include <catch2/catch.hpp>
+#include <catch2/catch_test_macros.hpp>
 #include <cmath>
 #include <thread>
 

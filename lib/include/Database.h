@@ -305,7 +305,8 @@ class Database {
         throw std::runtime_error("End of table!");
       }
     }
-    inline bool cmp(const it_state& s) const {
+    // Simple-Iterator-Template renamed the state comparison hook cmp() -> equals().
+    inline bool equals(const it_state& s) const {
       return end_of_table != s.end_of_table;
     }
 

@@ -22,7 +22,6 @@
 [submodule "3rdparty/ta-lib-rt"]
 	path = 3rdparty/ta-lib-rt
 	url = https://github.com/trufanov-nok/ta-lib-rt
-	ignore = untracked
 [submodule "3rdparty/json"]
 	path = 3rdparty/json
 	url = https://github.com/nlohmann/json
