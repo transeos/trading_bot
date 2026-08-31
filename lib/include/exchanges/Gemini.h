@@ -87,6 +87,7 @@ class Gemini : public Exchange, public VirtualExchange {
       int64_t oldest_trade_id = 1 /* 1 means the oldest trade, -N number means go N below newest_trade_id */) {
     // TODO
     assert(0);
+    return -1;  // unreachable; asserts above. Explicit return keeps MSVC happy.
   }
 
   virtual bool repairDatabase(const CurrencyPair currency_pair, bool full_repair = false);

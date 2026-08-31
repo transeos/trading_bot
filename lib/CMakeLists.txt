@@ -18,8 +18,17 @@ file(GLOB INDICATOR_HEADER_FILES include/indicators/*.hpp include/indicators/*.h
 file(GLOB TRIGGER_SRC_FILES src/triggers/*.cpp)
 file(GLOB TRIGGER_HEADER_FILES include/triggers/*.hpp include/triggers/*.h)
 
+# Build TraderBot as a static library on Windows: a shared library (DLL) would
+# require every symbol used across the DLL boundary to be explicitly exported,
+# whereas a static archive links cleanly. On Linux keep the original shared lib.
+if(WIN32)
+  set(TRADERBOT_LIB_TYPE STATIC)
+else()
+  set(TRADERBOT_LIB_TYPE SHARED)
+endif()
+
 # create executable
-add_library(TraderBot SHARED ${MAIN_SRC_FILES}
+add_library(TraderBot ${TRADERBOT_LIB_TYPE} ${MAIN_SRC_FILES}
         ${MAIN_HEADER_FILES}
         ${UTIL_SRC_FILES}
         ${UTIL_HEADER_FILES}
@@ -33,9 +42,11 @@ add_library(TraderBot SHARED ${MAIN_SRC_FILES}
         ${TRIGGER_HEADER_FILES})
 
 # link third party libraries
-target_link_libraries(TraderBot ${CURL_LIBRARIES}
-								${OPENSSL_SSL_LIBRARY}
-								${OPENSSL_CRYPTO_LIBRARY}
-								cryptopp
-								cassandra
-								ta_lib)
+target_link_libraries(TraderBot PUBLIC
+								CURL::libcurl
+								OpenSSL::SSL
+								OpenSSL::Crypto
+								${CRYPTOPP_LIBRARIES}
+								${CASSANDRA_LIBRARY}
+								${TALIB_LIBRARY}
+								Threads::Threads)

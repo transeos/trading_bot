@@ -1,5 +1,13 @@
 # README #
 
+## Building
+
+- **Linux:** see [SETUP.md](SETUP.md).
+- **Windows (MSVC / Visual Studio + vcpkg):** see the
+  [Windows Setup](SETUP.md#windows-setup-msvc--visual-studio--vcpkg) section of SETUP.md.
+
+## Configuration
+
 # populate configs/static_config.json
 "exchanges": {
   "coinbase": {

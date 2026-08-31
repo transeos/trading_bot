@@ -43,6 +43,7 @@ class Trigger {
 
   virtual Duration getInterval() const {
     assert(0);
+    return Duration();  // unreachable; asserts above. Explicit return keeps MSVC happy.
   }
 
   // pure virtual

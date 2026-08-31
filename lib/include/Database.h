@@ -12,6 +12,8 @@
 #include "iterator_tpl.h"
 #include "utils/TimeUtils.h"
 #include "utils/TraderUtils.h"
+#include <deque>
+#include <vector>
 
 /*******
  *

@@ -15,6 +15,7 @@
 #include "triggers/Trigger.h"
 #include "utils/dbUtils.h"
 #include <algorithm>
+#include <numeric>  // std::gcd
 
 //#define CHECK_EVENT_IN_PARALLEL
 
@@ -183,7 +184,7 @@ Duration TradeAlgo::getMinInterval() const {
       continue;
     }
 
-    min_interval = __gcd(min_interval, interval);
+    min_interval = Duration(std::gcd(min_interval.getDuration(), interval.getDuration()));
   }
 
   for (auto trigger : m_triggers) {
@@ -194,7 +195,7 @@ Duration TradeAlgo::getMinInterval() const {
       continue;
     }
 
-    min_interval = __gcd(min_interval, trigger->getInterval());
+    min_interval = Duration(std::gcd(min_interval.getDuration(), trigger->getInterval().getDuration()));
   }
 
   return min_interval;
